@@ -1,2 +1,2 @@
-# careers-website
-A career website
+# project-website
+A project website
