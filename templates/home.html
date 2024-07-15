@@ -38,23 +38,44 @@
   </style>
 </head>
 <body>
+  {% include 'nav.html' %}
 <div class="container">
     <h1 class="text-center mt-2 mb-4">{{company_name}}</h1>
     <img class="img-fluid" id="banner" src="https://21a8937a-9b06-4242-9087-95f2eb9f11fa-00-13ioopcr6kss4.sisko.replit.dev:5000/static/banner.jpg" height= "320">
     <h2>About Us</h2>
+     <div class="row" style="margin:16px 0px 16px 0px;">
+       <div class="col-md-6">
     <p class="lead">
-      Hey there, this is Sia Hocaine, the chef behind the recipes shared here in Food Hunt. I started cooking as a hobby during the COVID-19 lockdown. I have been cooking for over a year now and have made a lot of recipes for you to try out.Here me and my team bring recipes which are home made and are discovered while traveling in the suburban areas.We reach out to you with my recipes and you can also reach out to us with your suggestions.
+      Hey there, this is Sia Hocaine, the chef behind the recipes shared here in Food Hunt. I started cooking as a hobby during the COVID-19 lockdown. I have been cooking for over a year now and have made a lot of recipes for you to try out.Here me and my team bring recipes which are home made and are discovered while traveling in the suburban areas.
     </p>
+         <p class="lead">
+           We are a team of four, and we are passionate about cooking and sharing our recipes with the world.Whether you are a beginner or an experienced cook, we hope you will find something new and delicious to try on.Sia Hocaine is here to help you discover new and exciting recipes that will satisfy your taste.           
+           Also, you can reach out to us with your suggestions.
+         </p>
+         <p class="lead">
+                       <b>Email:</b> siahocaine@gmail.com<br>
+             <b>Phone:</b> +91 875 236 4551<br>
+             <b>Address:</b> Sector-5, Salt Lake, West Bengal, India<br>
+      
+         </p>
+   </div>
+        <div class="d-none d-md-block col-md-6">
+         <img src="/static/chef.jpg" alt="chef cooking" class="img-fluid">
+      </div>
+      </div>
     <h2 class="text-center mt-2 mb-4">Favourite Picks for You</h2>
   <div>
     {% for recipe in recipes %}
-    {% include 'recipes.html' %}
+    <div>
+      {% include 'recipes.html' %}
+    </div>
     {% endfor %}
    </div>
 
   <div style="text-align:center">
     <button type="button" class="btn btn-outline-primary">Query?</button>
   </div>
-  <p class=" text-center mt-4">Copyright 2024,Food Hunt</p>
+  {% include 'footer.html' %}
+
 </body> 
 </html>
